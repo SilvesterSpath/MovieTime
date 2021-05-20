@@ -1,0 +1,51 @@
+themoviedb.org
+
+
+
+Hi timi8,
+
+Your request for an API key has been approved. You can start using this key immediately.
+
+API Key: 8bdc7c4c2e117d340daa835481bab5d3
+
+An example request looks like:
+
+https://api.themoviedb.org/3/movie/550?api_key=8bdc7c4c2e117d340daa835481bab5d3
+
+We recently launched our TV API and would love some feedback if you have a chance to check it out.
+
+Useful Links
+
+    Documentation: https://www.themoviedb.org/documentation/api
+    Support forum: https://www.themoviedb.org/talk/category/5047958519c29526b50017d6
+    Wrappers & libraries: https://www.themoviedb.org/documentation/api/wrappers-libraries
+
+If you have any questions, feel free to create a new discussion in our support forum.
+
+--
+The Movie Database Team
+https://www.themoviedb.org
+
+Facebook: https://www.facebook.com/themoviedb
+Twitter: https://twitter.com/themoviedb
+Blog: https://blog.themoviedb.org
+
+Images
+
+You'll notice that movie, TV and person objects contain references to different file paths. In order to generate a fully working image URL, you'll need 3 pieces of data: Those pieces are a base_url, a file_size and a file_path.
+
+The first two pieces can be retrieved by calling the
+
+API and the third is the file path you're wishing to grab on a particular media object. Here's what a full image URL looks like if the poster_path of /kqjL17yufvn9OVLyXYpvtyrFfak.jpg was returned for a movie:
+
+https://image.tmdb.org/t/p/w500/kqjL17yufvn9OVLyXYpvtyrFfak.jpg
+
+
+
+
+
+
+
+
+
+	- if we add an eventListener to a form element, we can listen for a 'submit' event and we have to put the 'event' object into the callback functions parantheses and right after that I have to call the event.preventDefault() function to prevent the page to submit 
