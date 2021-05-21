@@ -1,5 +1,7 @@
 themoviedb.org
 
+https://developers.themoviedb.org/3/search/search-companies
+
 
 
 Hi timi8,
@@ -39,13 +41,3 @@ The first two pieces can be retrieved by calling the
 API and the third is the file path you're wishing to grab on a particular media object. Here's what a full image URL looks like if the poster_path of /kqjL17yufvn9OVLyXYpvtyrFfak.jpg was returned for a movie:
 
 https://image.tmdb.org/t/p/w500/kqjL17yufvn9OVLyXYpvtyrFfak.jpg
-
-
-
-
-
-
-
-
-
-	- if we add an eventListener to a form element, we can listen for a 'submit' event and we have to put the 'event' object into the callback functions parantheses and right after that I have to call the event.preventDefault() function to prevent the page to submit 

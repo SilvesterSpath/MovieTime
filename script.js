@@ -21,6 +21,10 @@ const SEARCH_API =
 
 const form = document.getElementById('form');
 const search = document.getElementById('search');
+const main = document.getElementById('main');
+const movie = document.querySelector('.movie');
+
+console.log(movie);
 
 // Get initial movies
 
@@ -29,6 +33,42 @@ async function getMovies(url) {
   const data = await res.json();
 
   console.log(data.results);
+
+  showMovies(data.results);
+}
+
+function showMovies(movies) {
+  main.innerHTML = '';
+  movies.forEach((i) => {
+    const { title, poster_path, overview, vote_average } = i;
+
+    const movieEl = document.createElement('div');
+    movieEl.classList.add('movie');
+
+    movieEl.innerHTML = `          
+      <img src="${IMG_PATH + poster_path}" alt="${title}">
+    
+      <div class="movie-info">
+        <h3>${title}</h3>
+        <span class="${getClassColor(vote_average)}">${vote_average}</span>
+      </div>
+      <div class="overview">
+        <h3>Overview</h3>
+        ${overview}
+      </div>
+  `;
+    main.appendChild(movieEl);
+  });
+}
+
+function getClassColor(number) {
+  if (number < 5) {
+    return 'red';
+  } else if (number < 8) {
+    return 'orange';
+  } else {
+    return 'green';
+  }
 }
 
 form.addEventListener('submit', (event) => {
